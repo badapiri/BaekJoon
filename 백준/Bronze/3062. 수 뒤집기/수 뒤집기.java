@@ -5,9 +5,10 @@ public class Main {
     public static void main(String[] args) {
     	
     Scanner sc = new Scanner(System.in);
-    int T = sc.nextInt(); // 테스트 케이스 개수 입력
 
-    for (int t = 0; t < T; t++) {
+    int Test = sc.nextInt(); // 테스트 케이스 개수 입력
+
+    for (int i = 0; i < Test; i++) {
     	
         int num = sc.nextInt(); // 정수 입력
         
@@ -16,6 +17,7 @@ public class Main {
         int reverse = 0; // 역순으로 변환된 정수를 저장할 변수
 
         while (num != 0) {
+        	
             reverse = reverse * 10 + num % 10; // 일의 자리를 가져와서 역순으로 변형
             num /= 10; // 다음 자릿 수로 이동
         }
@@ -28,8 +30,8 @@ public class Main {
 
         boolean isSymmetrical = true; // 좌우대칭 여부를 저장하는 변수
 
-        for (int i = 0; i < sumStr.length() / 2; i++) {
-            if (sumStr.charAt(i) != sumStr.charAt(sumStr.length() - i - 1)) {
+        for (int j = 0; j < sumStr.length() / 2; j++) {
+            if (sumStr.charAt(j) != sumStr.charAt(sumStr.length() - j - 1)) {
                 isSymmetrical = false; // 대칭이 아닌 경우 false로 설정하고 반복문 종료
                 break;
             }
